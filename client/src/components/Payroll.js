@@ -17,7 +17,7 @@ export default function Payroll() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:8000/shifts/shifts", {
+    fetch("http://react-app-clock-server.vercel.app/shifts/shifts", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

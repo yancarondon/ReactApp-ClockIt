@@ -14,7 +14,7 @@ export default function Employees() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8000/user/login", {
+      const response = await fetch("http://react-app-clock-server.vercel.app/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
