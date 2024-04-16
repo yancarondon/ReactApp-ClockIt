@@ -1,0 +1,96 @@
+.contactContainer {
+    background-color: rgb(22, 22, 22);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.react-parallax {
+    height: 100vh;
+    width: 100%;
+}
+
+/* 
+.react-parallax-bgimage {
+    height: 100vh;
+    width: 100%;
+    
+} */
+
+.bodyContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 20%;
+    width: 100%;
+    
+}
+
+.text , label {
+    color: white;
+}
+
+.iconsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: black;
+    width: 80%;
+    padding: 1%;
+    padding-left: 15%;
+    padding-right: 15%;
+    border-radius: 5px;
+    /* margin-top: 10%; */
+    /* margin-bottom: 50px; */
+}
+
+.iconsContainer img {
+    width: 30px;
+    height: 30px;
+    margin: 10px
+}
+
+.links {
+    text-decoration: none;
+    color: white;
+}
+
+/* .quotesDiv {
+background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    width: 100%;
+    padding: 5%;
+    margin-top: 5%;
+}
+
+.quotesDiv input {
+    width: 80%;
+    height: 70px;
+    margin-bottom: 25px;
+    margin-top: 35px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(22, 22, 22);
+    border-color: white;
+    border: 5px;
+    outline: auto;
+    color: white;
+}
+
+.quotesDiv button {
+    width: 90px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: rgb(237, 235, 235);
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+} */

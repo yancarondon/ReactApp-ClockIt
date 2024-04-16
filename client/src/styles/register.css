@@ -1,0 +1,67 @@
+.mainContainer {
+    background-color: rgb(22, 22, 22);
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(22, 22, 22);
+    margin-top: 10%;
+    /* border-radius: 10px; */
+    /* padding: 100px; */
+   /* height: 100vh; */
+}
+
+h1 {
+    color: rgb(234, 233, 233);
+}
+
+
+.registrationForm {
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 150%;
+    /* margin-left: 10%; */
+}
+
+.registrationForm input {
+    background-color: rgb(199, 199, 199);
+    margin-bottom: 25px;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(22, 22, 22);
+    border-color: white;
+    border: 0.5px;
+    outline: auto;
+    color: white;
+
+}
+
+.registrationForm button {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(231, 231, 231);
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.rowDivs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    padding-left: 10px;
+}
+
