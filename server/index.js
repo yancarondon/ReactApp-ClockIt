@@ -6,12 +6,12 @@ const PORT = process.env.PORT || 8000;
 //Add schema to server
 const User = require("./models/user.js");
 
-const user_routes = require("./router/user_router");
-const shiftRoutes = require("./router/shift_router");
-const config = require("./config/db_config");
+const user_routes = require("./router/user_router.js");
+const shiftRoutes = require("./router/shift_router.js");
+const config = require("./config/db_config.js");
 const session = require("express-session");
 const passport = require("passport");
-require("./config/passport")(passport);
+require("./config/passport.js")(passport);
 
 // Adding Mongoose and connecting to MongoDB
 const mongoose = require("mongoose");
@@ -45,7 +45,7 @@ app.use(
     cookie: {},
   })
 );
-require("./config/passport")(passport);
+require("./config/passport.js")(passport);
 app.use(passport.initialize());
 app.use(passport.session());
 
