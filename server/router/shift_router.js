@@ -69,4 +69,3 @@ router.get("/shifts", verifyToken, async (req, res, next) => {
 });
 
 module.exports = router;
-

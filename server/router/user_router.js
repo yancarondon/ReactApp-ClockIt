@@ -91,8 +91,6 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-
-
 // ___________Logout___________
 router.get("/logout", (req, res) => {
   req.logout();
