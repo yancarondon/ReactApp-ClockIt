@@ -38,7 +38,7 @@ const Register = () => {
     // Make a fetch request to the server endpoint for registration
     try {
       const response = await fetch(
-        "https://react-app-clock-server.vercel.app/user/register",
+        "https://react-app-clock-it-backend.vercel.app/user/register",
         {
           method: "POST",
           headers: {

@@ -8,8 +8,7 @@ const ShowNavBar = ({ children }) => {
   useEffect(() => {
     if (location.pathname === "/payroll") {
       setViewNavBar(false);
-    }
-    else if (location.pathname === "/profile") {
+    } else if (location.pathname === "/profile") {
       setViewNavBar(false);
     } else {
       setViewNavBar(true);
