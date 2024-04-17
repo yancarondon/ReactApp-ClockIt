@@ -1,4 +1,4 @@
-import React, {useState, useEffect }from "react";
+import React, { useState, useEffect } from "react";
 import igIcon from "../assets/contacticons/igicon.png";
 import mailIcon from "../assets/contacticons/emailicon.jpeg";
 import phoneIcon from "../assets/contacticons/phoneicon.jpeg";
@@ -9,6 +9,7 @@ import home from "../assets/kitchenimage4.jpeg";
 export default function ContactUs() {
   const sendEmail = () => {
     console.log("Email sent!");
+    alert("Email sent!");
   };
 
   const [showText, setShowText] = useState(false);
@@ -23,18 +24,28 @@ export default function ContactUs() {
     <div className="contactContainer">
       <Parallax strength={300} blur={5} bgImage={home}>
         <div className="bodyContainer">
-          <div className="iconsContainer" style={{
+          <div
+            className="iconsContainer"
+            style={{
               backgroundColor: "black",
               marginLeft: showText ? "0" : "-300px",
               transition: "margin-left 1s",
-            }}>
+            }}
+          >
             <div>
               <img src={igIcon} alt="Instagram" />
-              <a href="https://www.instagram.com/rondonrenovations/" className="links">@rondonrenovations</a>
+              <a
+                href="https://www.instagram.com/rondonrenovations/"
+                className="links"
+              >
+                @rondonrenovations
+              </a>
             </div>
             <div>
               <img src={mailIcon} alt="Email" />
-              <a href="mailto:rondonrenovations@gmail.com" className="links">rondonrenovations@gmail.com</a>
+              <a href="mailto:rondonrenovations@gmail.com" className="links">
+                rondonrenovations@gmail.com
+              </a>
             </div>
             <div>
               <img src={phoneIcon} alt="Phone" />
@@ -50,8 +61,6 @@ export default function ContactUs() {
             </button>
           </div> */}
         </div>
-
-       
       </Parallax>
       <div className="footer">Rondon Construction & Renovations © 2024</div>
     </div>

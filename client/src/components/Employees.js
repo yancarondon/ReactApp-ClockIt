@@ -14,13 +14,16 @@ export default function Employees() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://react-app-clock-server.vercel.app/user/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, password }),
-      });
+      const response = await fetch(
+        "https://react-app-clock-server.vercel.app/user/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        }
+      );
       console.log(response);
       if (!response.ok) {
         console.log(" error is here");
@@ -45,13 +48,12 @@ export default function Employees() {
 
   const handleRegistration = () => {
     navigate("register");
-  }
+  };
 
   return (
     <>
       <div className="mainContainer">
         <div className="bodyDiv">
-          
           <div className="imgContainer">
             <img src={logo} alt="Instagram" className="imgContainer" />
           </div>
@@ -66,24 +68,25 @@ export default function Employees() {
           )}
 
           <form className="login">
-        
-              <label>Username</label>
-              <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              ></input>
-              <label>Password</label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              ></input>
-              <button type="submit" id="submitButton" onClick={handleLogin}>
-                LOGIN
-              </button>
-              <div className="registerDiv" >  
-              <p onClick={handleRegistration} className="register">Register here</p>
+            <label>Username</label>
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            ></input>
+            <label>Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            ></input>
+            <button type="submit" id="submitButton" onClick={handleLogin}>
+              LOGIN
+            </button>
+            <div className="registerDiv">
+              <p onClick={handleRegistration} className="register">
+                Register here
+              </p>
             </div>
           </form>
         </div>

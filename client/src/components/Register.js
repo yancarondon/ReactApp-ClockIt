@@ -37,13 +37,16 @@ const Register = () => {
     }
     // Make a fetch request to the server endpoint for registration
     try {
-      const response = await fetch("http://react-app-clock-server.vercel.app/user/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://react-app-clock-server.vercel.app/user/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const data = await response.json();
       if (!response.ok) {
         // If there are errors, set them in the state
@@ -78,69 +81,69 @@ const Register = () => {
         </div>
       )}
       <div className="body">
-      {/* Registration form */}
-      <form className="registrationForm" onSubmit={handleSubmit}>
-      <h1>Register</h1>
-        {/* First row */}
-        <div className="rowDivs">
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-          <label htmlFor="phone">Phone:</label>
-          <input
-            type="text"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-        </div>
-        {/* Second row */}
-        <div className="rowDivs">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-          />
-        </div>
-        {/* Third row */}
-        <div className="rowDivs">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-          />
-          <label htmlFor="confirm_password">Confirm Password:</label>{" "}
-          <input
-            type="password"
-            id="confirm_password"
-            name="confirm_password"
-            value={formData.confirm_password}
-            onChange={handleChange}
-          />
-        </div>
-        {/* Submit button */}
-        <button type="submit">Submit</button>
-      </form>
+        {/* Registration form */}
+        <form className="registrationForm" onSubmit={handleSubmit}>
+          <h1>Register</h1>
+          {/* First row */}
+          <div className="rowDivs">
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <label htmlFor="phone">Phone:</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+          </div>
+          {/* Second row */}
+          <div className="rowDivs">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <label htmlFor="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              value={formData.username}
+              onChange={handleChange}
+            />
+          </div>
+          {/* Third row */}
+          <div className="rowDivs">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+            />
+            <label htmlFor="confirm_password">Confirm Password:</label>{" "}
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+              value={formData.confirm_password}
+              onChange={handleChange}
+            />
+          </div>
+          {/* Submit button */}
+          <button type="submit">Submit</button>
+        </form>
       </div>
       <div className="footer">Rondon Construction & Renovations © 2024</div>
     </div>

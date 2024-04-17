@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/payroll.css";
-import Navbar from "./EmployeeNavbar"; 
-
+import Navbar from "./EmployeeNavbar";
 
 export default function Payroll() {
   const [shifts, setShifts] = useState([]);
@@ -17,7 +16,7 @@ export default function Payroll() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://react-app-clock-server.vercel.app/shifts/shifts", {
+    fetch("https://react-app-clock-server.vercel.app/shifts/shifts", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -32,11 +31,12 @@ export default function Payroll() {
       .catch((error) => console.error("Error fetching right here!", error));
   }, []);
 
- 
   const calculateTotalHours = () => {
     const weekAgo = new Date();
-    weekAgo.setDate(weekAgo.getDate() - 7); 
-    const filteredShifts = shifts.filter(shift => new Date(shift.clockIn) > weekAgo);
+    weekAgo.setDate(weekAgo.getDate() - 7);
+    const filteredShifts = shifts.filter(
+      (shift) => new Date(shift.clockIn) > weekAgo
+    );
     const totalMilliseconds = filteredShifts.reduce((total, shift) => {
       const clockIn = new Date(shift.clockIn);
       const clockOut = new Date(shift.clockOut);
@@ -78,9 +78,12 @@ export default function Payroll() {
           <div className="rightdiv">
             <h4>YOUR MOST RECENT WEEKLY PAYMENT</h4>
             <div className="wrapperDiv">
-            <div className="payrollDivs">
-              <p>Total Hours Worked in the Past Week: {totalHoursWorked.toFixed(2)}</p>
-              <p>Total Weekly Salary: ${totalWeeklySalary.toFixed(2)}</p>
+              <div className="payrollDivs">
+                <p>
+                  Total Hours Worked in the Past Week:{" "}
+                  {totalHoursWorked.toFixed(2)}
+                </p>
+                <p>Total Weekly Salary: ${totalWeeklySalary.toFixed(2)}</p>
               </div>
             </div>
           </div>
